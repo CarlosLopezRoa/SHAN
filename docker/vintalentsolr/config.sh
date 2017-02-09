@@ -7,8 +7,8 @@ chmod 777 -R /var/www/html
 exit
 docker exec -it vintalentsolr  bash
 cd /opt/solr
-bin/solr create -c files -d example/files/conf
-bin/post -c files /var/www/html
+bin/solr create -c shannutch -d example/files/conf
+bin/post -c shan /var/www/html
 
 docker run --name vintalentsolr -d -p 8983:8983 -p 9999:80 -v ~/Volumes/Lacie\ Arc/Data/Vintalent/Vintalent-Solr/:/var/www/html -t shan:vintalent
 
